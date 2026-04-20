@@ -843,6 +843,8 @@ const _ICONS = {
   dot:      '<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;box-shadow:0 0 6px currentColor;vertical-align:1px;margin-right:3px"></span>',
 };
 function ic(name){ return _ICONS[name] || ''; }
+// Escapar valor para uso dentro de atributo HTML con comillas dobles
+function _esc(s){ return String(s??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 // SVG de medalla coloreado para podio: pos 0=oro, 1=plata, 2=bronce
 function medalSvg(pos){
   const colors=['var(--gold)','var(--silver)','var(--bronze)'];
@@ -918,7 +920,7 @@ window.editarJugador=(id)=>{
   const genOpts=[['C','Caballero'],['D','Dama']].map(([v,l])=>`<option value="${v}" ${j.genero===v?'selected':''}>${l}</option>`).join('');
   openModal('Editar Jugador',`
     <div class="edit-row">
-      <div class="fg"><label>Nombre</label><input id="edit-nombre" value="${j.nombre}"></div>
+      <div class="fg"><label>Nombre</label><input id="edit-nombre" value="${_esc(j.nombre)}"></div>
     </div>
     <div class="edit-row">
       <div class="fg"><label>Cat #</label><select id="edit-num">${numOpts}</select></div>
