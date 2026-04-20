@@ -443,12 +443,12 @@ select option{background:var(--navy)}
     <div class="stile"><div class="sval" id="sta" style="font-size:18px;padding-top:5px">—</div><div class="slbl">Activos</div></div>
   </div>
   <div class="card">
-    <div class="ctitle">⚡ Top 10 Ranking</div>
+    <div class="ctitle"><svg class="ico" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>Top 10 Ranking</div>
     <table class="tbl"><thead><tr><th>#</th><th>Jugador</th><th>Cat</th><th>G</th><th>Pts</th></tr></thead>
     <tbody id="dash-rank"></tbody></table>
   </div>
   <div class="card">
-    <div class="ctitle">🏆 Torneos Activos</div>
+    <div class="ctitle"><svg class="ico" viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M9 20h6M12 13v7"/></svg>Torneos Activos</div>
     <div id="dash-activos"></div>
   </div>
 </section>
@@ -460,7 +460,7 @@ select option{background:var(--navy)}
   <div class="psub">Alta, edición y organización por categoría y género.</div>
 
   <div class="card">
-    <div class="ctitle">➕ Nuevo Jugador</div>
+    <div class="ctitle"><svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Nuevo Jugador</div>
     <div class="frow">
       <div class="fg"><label>Nombre completo</label><input id="jn" placeholder="Nombre y apellido" oninput="chkJN()"></div>
       <div class="fg" style="max-width:80px"><label>Cat #</label>
@@ -473,22 +473,22 @@ select option{background:var(--navy)}
         <select id="jgen"><option value="C">Caballero</option><option value="D">Dama</option></select>
       </div>
       <div class="fg" style="justify-content:flex-end;max-width:100px"><label>&nbsp;</label>
-        <button class="btn btn-p" onclick="addJugador()">➕ Agregar</button>
+        <button class="btn btn-p" onclick="addJugador()"><svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>Agregar</button>
       </div>
     </div>
     <div id="jn-warn" style="display:none;color:var(--danger);font-size:11px;margin-top:3px"></div>
   </div>
 
   <div class="card">
-    <div class="ctitle">📥 Importar Excel</div>
+    <div class="ctitle"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>Importar Excel</div>
     <p style="font-size:12px;color:var(--gray);margin-bottom:8px">Columnas requeridas: <strong style="color:var(--white)">Nombre · Categoria · Variante · Genero</strong></p>
-    <label class="fbtn" for="fexcel">📂 Seleccionar .xlsx</label>
+    <label class="fbtn" for="fexcel"><svg class="ico" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>Seleccionar .xlsx</label>
     <input type="file" id="fexcel" accept=".xlsx,.xls" onchange="importExcel(this)">
     <div id="excel-res" style="margin-top:8px"></div>
   </div>
 
   <div class="card">
-    <div class="ctitle">👥 Jugadores por Categoría</div>
+    <div class="ctitle"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>Jugadores por Categoría</div>
     <div class="frow" style="margin-bottom:12px">
       <div class="fg"><label>Buscar en todas</label><input id="jbuscar" placeholder="Nombre…" oninput="renderJugadores()"></div>
       <div class="fg" style="max-width:110px"><label>Género</label>
@@ -507,7 +507,7 @@ select option{background:var(--navy)}
 
   <div class="t-builder">
     <div class="t-builder-header">
-      <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--lime)">🏆 Crear Nuevo Torneo</div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;color:var(--lime);display:inline-flex;align-items:center;gap:8px"><svg class="ico ico-lg" viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M9 20h6M12 13v7"/></svg>Crear Nuevo Torneo</div>
     </div>
     <div class="t-builder-body">
       <!-- Config básica -->
@@ -551,12 +551,12 @@ select option{background:var(--navy)}
           </div>
           <div class="jsel-panel">
             <div class="jsel-search">
-              <input id="jsel-search" placeholder="🔍 Buscar jugador por nombre…" oninput="refreshJSelPanel()">
+              <input id="jsel-search" placeholder="Buscar jugador por nombre…" oninput="refreshJSelPanel()">
             </div>
             <div class="jsel-list" id="jsel-list"></div>
           </div>
           <div style="font-size:10px;color:var(--gray);margin-top:5px">
-            💡 Click en un jugador para seleccionarlo como J1 o J2 de la pareja actual
+            <svg class="ico" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:4px"><path d="M9 21h6M10 17h4M12 3a6 6 0 014 10.5V15a2 2 0 01-2 2h-4a2 2 0 01-2-2v-1.5A6 6 0 0112 3z"/></svg>Click en un jugador para seleccionarlo como J1 o J2 de la pareja actual
           </div>
         </div>
 
@@ -577,11 +577,11 @@ select option{background:var(--navy)}
               <div style="flex:1;background:var(--navy2);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-size:12px;min-height:34px" id="wip-j2">
                 <span style="color:var(--gray)">Jugador 2 — click en lista</span>
               </div>
-              <button class="btn btn-g sm" onclick="clearWip()" title="Limpiar">↺</button>
+              <button class="btn btn-g sm" onclick="clearWip()" title="Limpiar"><svg class="ico" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1015-6.7L21 8M21 3v5h-5"/></svg></button>
             </div>
             <div id="wip-warn" style="font-size:10px;color:var(--warn);margin-top:5px;display:none"></div>
             <div style="margin-top:7px;display:flex;gap:6px">
-              <button class="btn btn-p" style="flex:1" onclick="addParejaFromWip()">✅ Confirmar pareja</button>
+              <button class="btn btn-p" style="flex:1" onclick="addParejaFromWip()"><svg class="ico" viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 6"/></svg>Confirmar pareja</button>
             </div>
           </div>
 
@@ -596,7 +596,7 @@ select option{background:var(--navy)}
             </div>
           </div>
 
-          <button class="btn btn-p" style="width:100%;margin-top:10px" onclick="crearTorneo()">🎾 Generar Torneo</button>
+          <button class="btn btn-p" style="width:100%;margin-top:10px" onclick="crearTorneo()"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M6 6 L18 18 M6 18 L18 6"/></svg>Generar Torneo</button>
         </div>
       </div>
     </div>
@@ -612,8 +612,8 @@ select option{background:var(--navy)}
   <div class="psub">Cada categoría tiene su propio ranking independiente. Solo cuentan los torneos finalizados.</div>
   <div class="card" style="padding:10px 14px">
     <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center">
-      <span class="badge bgold">🥇 Campeón 100pts</span>
-      <span class="badge bg">🥈 2do 50pts</span>
+      <span class="badge bgold">Campeón · 100 pts</span>
+      <span class="badge bg">2° · 50 pts</span>
       <span class="badge bg">Semifinal 25pts</span>
       <span class="badge bl">Cuartos 15pts</span>
       <span style="font-size:10px;color:var(--gray)">Puntos individuales · Solo torneos finalizados</span>
@@ -683,14 +683,14 @@ try {
     jugadores = snap.val() || {};
     LC.set('jugadores', jugadores);
     _onJugadoresChange();
-    setSync(true, 'Firebase 🔥');
+    setSync(true, 'En vivo');
   }, () => setSync(false, 'Sin red'));
 
   db.ref('torneos').on('value', snap => {
     torneos = snap.val() || {};
     LC.set('torneos', torneos);
     _onTorneosChange();
-    setSync(true, 'Firebase 🔥');
+    setSync(true, 'En vivo');
   }, () => setSync(false, 'Sin red'));
 
   fbOnline = true;
@@ -771,7 +771,7 @@ function exportarDatos(){
   a.href = URL.createObjectURL(blob);
   a.download = 'penta_padel_backup_'+new Date().toISOString().slice(0,10)+'.json';
   a.click();
-  toast('✅ Backup exportado');
+  toast(ic('check')+' Backup exportado');
 }
 function importarDatos(){
   const inp=document.createElement('input');
@@ -791,7 +791,7 @@ function importarDatos(){
           if(data.torneos){torneos=data.torneos;LC.set('torneos',torneos);}
           _onJugadoresChange(); _onTorneosChange();
         }
-        toast(`✅ Importado: ${Object.keys(data.jugadores||{}).length} jugadores, ${Object.keys(data.torneos||{}).length} torneos`);
+        toast(ic('check')+` Importado: ${Object.keys(data.jugadores||{}).length} jugadores, ${Object.keys(data.torneos||{}).length} torneos`);
       }catch(err){toast('Error al leer archivo','err');}
     };
     reader.readAsText(file);
@@ -817,10 +817,43 @@ document.addEventListener('DOMContentLoaded',()=>{
 // ══════════════════════════════════════════════════════════
 
 
+
+// ── ICONOS SVG MONOLINE (reemplazo de emojis) ──
+const _ICONS = {
+  check:    '<svg class="ico" viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 6"/></svg>',
+  plus:     '<svg class="ico" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>',
+  x:        '<svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"/></svg>',
+  trash:    '<svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13a2 2 0 002 2h6a2 2 0 002-2l1-13M10 11v6M14 11v6"/></svg>',
+  edit:     '<svg class="ico" viewBox="0 0 24 24"><path d="M15 4l5 5-11 11H4v-5L15 4z"/></svg>',
+  warn:     '<svg class="ico" viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3zM12 10v5M12 18.5v.01"/></svg>',
+  trophy:   '<svg class="ico" viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M9 20h6M12 13v7"/></svg>',
+  users:    '<svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>',
+  chart:    '<svg class="ico" viewBox="0 0 24 24"><path d="M3 20h4v-8H3zM10 20h4V4h-4zM17 20h4v-12h-4z"/></svg>',
+  search:   '<svg class="ico" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>',
+  download: '<svg class="ico" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>',
+  folder:   '<svg class="ico" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>',
+  bolt:     '<svg class="ico" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>',
+  tv:       '<svg class="ico" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>',
+  hourglass:'<svg class="ico" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M6 3v3a6 6 0 0012 0V3M6 21v-3a6 6 0 0112 0v3"/></svg>',
+  reset:    '<svg class="ico" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1015-6.7L21 8M21 3v5h-5"/></svg>',
+  ball:     '<svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M6 6 L18 18 M6 18 L18 6"/></svg>',
+  medal:    '<svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="15" r="6"/><path d="M8 4l2 6M16 4l-2 6M9 4h6"/></svg>',
+  info:     '<svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M12 12v5"/></svg>',
+  bulb:     '<svg class="ico" viewBox="0 0 24 24"><path d="M9 21h6M10 17h4M12 3a6 6 0 014 10.5V15a2 2 0 01-2 2h-4a2 2 0 01-2-2v-1.5A6 6 0 0112 3z"/></svg>',
+  dot:      '<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:currentColor;box-shadow:0 0 6px currentColor;vertical-align:1px;margin-right:3px"></span>',
+};
+function ic(name){ return _ICONS[name] || ''; }
+// SVG de medalla coloreado para podio: pos 0=oro, 1=plata, 2=bronce
+function medalSvg(pos){
+  const colors=['var(--gold)','var(--silver)','var(--bronze)'];
+  const c=colors[pos]||'var(--text-mute)';
+  return `<svg viewBox="0 0 24 24" style="width:1em;height:1em;stroke:${c};fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;vertical-align:-2px"><circle cx="12" cy="15" r="6"/><path d="M8 4l2 6M16 4l-2 6M9 4h6"/></svg>`;
+}
+
 // ── Utils ──
 function toast(msg,type='ok'){
   const t=document.getElementById('toast');
-  t.textContent=msg; t.className='show '+type;
+  t.innerHTML=msg; t.className='show '+type;
   clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),2800);
 }
 function catL(num,vari){ return 'C'+num+(vari||''); }
@@ -856,7 +889,7 @@ window.chkJN=()=>{
   const w=document.getElementById('jn-warn');
   const dup=jArr().find(j=>j.nombre.toLowerCase()===v.toLowerCase());
   w.style.display=dup?'block':'none';
-  w.textContent=dup?'⚠️ Ya existe un jugador con ese nombre':'';
+  w.innerHTML=dup?ic('warn')+' Ya existe un jugador con ese nombre':'';
 };
 
 window.addJugador=()=>{
@@ -869,13 +902,13 @@ window.addJugador=()=>{
   dbPushJugador({nombre,catNum:num,catVar:vari,genero,puntos:0,torneosCount:0});
   document.getElementById('jn').value='';
   document.getElementById('jn-warn').style.display='none';
-  toast('✅ '+nombre+' agregado');
+  toast(ic('check')+' '+nombre+' agregado');
 };
 
 window.eliminarJugador=(id)=>{
   const j=jugadores[id];
   openModal('Eliminar jugador',`<p style="color:var(--gray)">¿Eliminar a <strong>${j.nombre}</strong>?</p>`,
-    ()=>{ dbRemoveJugador(id); toast('🗑️ Eliminado'); });
+    ()=>{ dbRemoveJugador(id); toast(ic('trash')+' Eliminado'); });
 };
 
 window.editarJugador=(id)=>{
@@ -899,7 +932,7 @@ window.editarJugador=(id)=>{
       const genero=document.getElementById('edit-gen').value;
       if(!nombre){toast('Nombre requerido','err');return;}
       dbUpdateJugador(id,{nombre,catNum,catVar,genero});
-      toast('✅ Jugador actualizado');
+      toast(ic('check')+' Jugador actualizado');
     },'Guardar cambios');
 };
 
@@ -911,7 +944,7 @@ window.renderJugadores=()=>{
   if(!c) return;
 
   const filtrado=jArr().filter(j=>j.nombre.toLowerCase().includes(q)&&(!fg||j.genero===fg));
-  if(!filtrado.length){c.innerHTML='<div class="empty"><div class="ei">👥</div>Sin jugadores</div>';return;}
+  if(!filtrado.length){c.innerHTML=`<div class="empty"><div class="ei"><svg viewBox="0 0 24 24" style="width:42px;height:42px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg></div>Sin jugadores</div>`;return;}
 
   // Agrupar por catNum
   const grupos={};
@@ -980,8 +1013,8 @@ function renderFolderTable(js, varColors){
       <td style="color:var(--lime);font-weight:700">${j.puntos||0}</td>
       <td>${j.torneosCount||0}</td>
       <td style="display:flex;gap:4px">
-        <button class="btn btn-blue sm" onclick="editarJugador('${j.id}')">✏️</button>
-        <button class="btn btn-d sm" onclick="eliminarJugador('${j.id}')">✕</button>
+        <button class="btn btn-blue sm" onclick="editarJugador('${j.id}')" title="Editar"><svg class="ico" viewBox="0 0 24 24"><path d="M15 4l5 5-11 11H4v-5L15 4z"/></svg></button>
+        <button class="btn btn-d sm" onclick="eliminarJugador('${j.id}')" title="Eliminar"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"/></svg></button>
       </td>
     </tr>`).join('')}
     </tbody></table></div>`;
@@ -1011,8 +1044,8 @@ window.importExcel=(input)=>{
         added++;
       }
       const res=document.getElementById('excel-res');
-      res.innerHTML=`<div style="color:var(--lime);font-size:12px">✅ ${added} importados${skipped?` · ${skipped} omitidos`:''}</div>${errs.length?`<div style="color:var(--warn);font-size:10px;margin-top:3px">${errs.slice(0,4).join(' · ')}</div>`:''}`;
-      toast(`✅ ${added} jugadores importados`);
+      res.innerHTML=`<div style="color:var(--lime);font-size:12px;display:inline-flex;align-items:center;gap:6px">${ic('check')} ${added} importados${skipped?` · ${skipped} omitidos`:''}</div>${errs.length?`<div style="color:var(--warn);font-size:10px;margin-top:3px">${errs.slice(0,4).join(' · ')}</div>`:''}`;
+      toast(ic('check')+` ${added} jugadores importados`);
     }catch(e){toast('Error: '+e.message,'err');}
   };
   reader.readAsBinaryString(file);
@@ -1087,8 +1120,8 @@ window.refreshJSelPanel=()=>{
     return `<div class="jsel-item ${inUse?'selected':''} ${!compat&&!inUse?'warn-cat':''}" data-jid="${inUse?'':''+j.id}" style="${inUse?'cursor:default':'cursor:pointer'}">
       <span class="jsel-item-name" style="${inUse?'text-decoration:line-through;color:var(--gray)':''}">${j.nombre}</span>
       <span class="jsel-item-cat">${catL(j.catNum,j.catVar)} ${j.genero}</span>
-      ${!compat&&!inUse?`<span style="font-size:9px;color:var(--warn);margin-left:4px">⚠️</span>`:''}
-      ${inUse?'<span style="font-size:10px;color:var(--gray)">✓</span>':'<span class="jsel-item-add">+</span>'}
+      ${!compat&&!inUse?`<svg class="ico" viewBox="0 0 24 24" style="width:12px;height:12px;color:var(--warn);margin-left:4px"><path d="M12 3l10 18H2L12 3zM12 10v5M12 18.5v.01"/></svg>`:''}
+      ${inUse?`<svg class="ico" viewBox="0 0 24 24" style="width:12px;height:12px;color:var(--text-mute)"><path d="M5 12l4.5 4.5L19 6"/></svg>`:'<span class="jsel-item-add">+</span>'}
     </div>`;
   }).join('');
   // Event delegation — un solo listener en el contenedor, evita problemas con onclick en módulos
@@ -1107,11 +1140,11 @@ window.selectJugador=(id)=>{
   if(!wipJ1){
     wipJ1=j;
     document.getElementById('wip-j1').innerHTML=`<strong>${j.nombre}</strong> <span style="color:var(--gray);font-size:10px">${catL(j.catNum,j.catVar)} ${j.genero}</span>
-    <button onclick="wipJ1=null;updateWipDisplay()" style="float:right;background:none;border:none;color:var(--danger);cursor:pointer;font-size:12px">✕</button>`;
+    <button onclick="wipJ1=null;updateWipDisplay()" style="float:right;background:none;border:none;color:var(--danger);cursor:pointer;font-size:12px"><svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round"><path d="M6 6l12 12M6 18L18 6"/></svg></button>`;
   } else if(!wipJ2){
     wipJ2=j;
     document.getElementById('wip-j2').innerHTML=`<strong>${j.nombre}</strong> <span style="color:var(--gray);font-size:10px">${catL(j.catNum,j.catVar)} ${j.genero}</span>
-    <button onclick="wipJ2=null;updateWipDisplay()" style="float:right;background:none;border:none;color:var(--danger);cursor:pointer;font-size:12px">✕</button>`;
+    <button onclick="wipJ2=null;updateWipDisplay()" style="float:right;background:none;border:none;color:var(--danger);cursor:pointer;font-size:12px"><svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round"><path d="M6 6l12 12M6 18L18 6"/></svg></button>`;
   } else {
     toast('Ya hay 2 jugadores seleccionados. Confirmá o limpiá primero.','info');
     return;
@@ -1123,13 +1156,13 @@ window.selectJugador=(id)=>{
 window.updateWipDisplay=()=>{
   if(wipJ1){
     document.getElementById('wip-j1').innerHTML=`<strong>${wipJ1.nombre}</strong> <span style="color:var(--gray);font-size:10px">${catL(wipJ1.catNum,wipJ1.catVar)} ${wipJ1.genero}</span>
-    <button onclick="wipJ1=null;updateWipDisplay();refreshJSelPanel()" style="float:right;background:none;border:none;color:var(--danger);cursor:pointer;font-size:12px">✕</button>`;
+    <button onclick="wipJ1=null;updateWipDisplay();refreshJSelPanel()" style="float:right;background:none;border:none;color:var(--danger);cursor:pointer;font-size:12px"><svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round"><path d="M6 6l12 12M6 18L18 6"/></svg></button>`;
   } else {
     document.getElementById('wip-j1').innerHTML='<span style="color:var(--gray)">Jugador 1 — click en lista</span>';
   }
   if(wipJ2){
     document.getElementById('wip-j2').innerHTML=`<strong>${wipJ2.nombre}</strong> <span style="color:var(--gray);font-size:10px">${catL(wipJ2.catNum,wipJ2.catVar)} ${wipJ2.genero}</span>
-    <button onclick="wipJ2=null;updateWipDisplay();refreshJSelPanel()" style="float:right;background:none;border:none;color:var(--danger);cursor:pointer;font-size:12px">✕</button>`;
+    <button onclick="wipJ2=null;updateWipDisplay();refreshJSelPanel()" style="float:right;background:none;border:none;color:var(--danger);cursor:pointer;font-size:12px"><svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round"><path d="M6 6l12 12M6 18L18 6"/></svg></button>`;
   } else {
     document.getElementById('wip-j2').innerHTML='<span style="color:var(--gray)">Jugador 2 — click en lista</span>';
   }
@@ -1138,7 +1171,7 @@ window.updateWipDisplay=()=>{
   if(wipJ1&&wipJ2){
     const v=getParejaValidity(wipJ1,wipJ2);
     ww.style.display=v.ok?'none':'block';
-    ww.textContent=v.ok?'':'⚠️ '+v.msg+' (se puede igual, quedará marcado)';
+    ww.innerHTML=v.ok?'':ic('warn')+' '+v.msg+' (se puede igual, quedará marcado)';
   } else {
     ww.style.display='none';
   }
@@ -1155,7 +1188,7 @@ window.addParejaFromWip=()=>{
   wipJ1=null; wipJ2=null;
   updateWipDisplay();
   renderParejasList();
-  toast(`✅ Pareja ${parejasConfirmed.length} agregada`);
+  toast(ic('check')+` Pareja ${parejasConfirmed.length} agregada`);
 };
 
 window.removeParejaConfirmed=(idx)=>{
@@ -1180,8 +1213,8 @@ function renderParejasList(){
     <div class="pareja-item ${p.warn?'warn':'ok'}">
       <span class="pareja-num">P${i+1}</span>
       <span class="pareja-names">${p.j1.nombre} <span style="color:var(--gray);">/</span> ${p.j2.nombre}</span>
-      ${p.warn?`<span class="pareja-warn-txt">⚠️ ${p.warnMsg}</span>`:''}
-      <button class="btn btn-d sm" onclick="removeParejaConfirmed(${i})">✕</button>
+      ${p.warn?`<span class="pareja-warn-txt"><svg class="ico" viewBox="0 0 24 24" style="width:11px;height:11px;vertical-align:-2px"><path d="M12 3l10 18H2L12 3zM12 10v5M12 18.5v.01"/></svg> ${p.warnMsg}</span>`:''}
+      <button class="btn btn-d sm" onclick="removeParejaConfirmed(${i})" title="Quitar"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"/></svg></button>
     </div>`).join('');
 }
 
@@ -1219,7 +1252,7 @@ window.crearTorneo=()=>{
   updateWipDisplay();
   renderParejasList();
   refreshJSelPanel();
-  toast(`🏆 "${nombre}" creado con ${parejas.length} parejas`);
+  toast(ic('trophy')+` "${nombre}" creado con ${parejas.length} parejas`);
 };
 
 function genClasif(parejas){
@@ -1247,7 +1280,7 @@ function genClasif(parejas){
 window.renderTorneos=()=>{
   const c=document.getElementById('torneos-lista'); if(!c) return;
   const lista=tArr();
-  if(!lista.length){c.innerHTML='<div class="empty"><div class="ei">🏆</div>Sin torneos</div>';return;}
+  if(!lista.length){c.innerHTML=`<div class="empty"><div class="ei"><svg viewBox="0 0 24 24" style="width:42px;height:42px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M9 20h6M12 13v7"/></svg></div>Sin torneos</div>`;return;}
   c.innerHTML=lista.map(t=>buildTC(t)).join('');
   // Re-render TV si está abierta
   if(tvTid && torneos[tvTid]) renderTV();
@@ -1279,15 +1312,15 @@ function buildTC(raw){
         <span class="badge bl">${lTipo}</span>
         <span class="badge ${t.genero==='C'?'bb':t.genero==='D'?'bd':'bl'}">${lGen}</span>
         <span class="badge bg">${t.fecha}</span>
-        <span class="badge ${activo?'bl':'bg'}">${activo?'🟢 Activo':'✅ Fin'}</span>
+        <span class="badge ${activo?'bl':'bg'}">${activo?`<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 6px var(--lime);margin-right:4px;vertical-align:1px"></span>Activo`:'Finalizado'}</span>
         <span class="badge bg">${t.fase}</span>
       </div>
     </div>
     <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-      <button class="btn btn-blue sm" onclick="abrirTV('${t.id}')" title="Ver modo torneo">📺 Ver Torneo</button>
-      ${activo&&cD?`<button class="btn btn-p sm" onclick="avanzarFase('${t.id}')">🏆 Generar Llaves</button>`:''}
-      ${activo&&fD?`<button class="btn btn-gold sm" onclick="finalizarTorneo('${t.id}')">🏆 Finalizar</button>`:''}
-      ${activo?`<button class="btn btn-d sm" onclick="eliminarTorneo('${t.id}')">✕</button>`:''}
+      <button class="btn btn-blue sm" onclick="abrirTV('${t.id}')" title="Ver modo torneo"><svg class="ico" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Ver Torneo</button>
+      ${activo&&cD?`<button class="btn btn-p sm" onclick="avanzarFase('${t.id}')"><svg class="ico" viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M9 20h6M12 13v7"/></svg>Generar Llaves</button>`:''}
+      ${activo&&fD?`<button class="btn btn-gold sm" onclick="finalizarTorneo('${t.id}')"><svg class="ico" viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M9 20h6M12 13v7"/></svg>Finalizar</button>`:''}
+      ${activo?`<button class="btn btn-d sm" onclick="eliminarTorneo('${t.id}')" title="Eliminar torneo"><svg class="ico" viewBox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6"/></svg></button>`:''}
     </div>
   </div>
   <div class="tc-body">
@@ -1299,7 +1332,7 @@ function buildTC(raw){
 
     <details>
       <summary style="cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--gray);margin-bottom:7px;user-select:none">
-        📊 Posiciones
+        <svg class="ico" viewBox="0 0 24 24" style="vertical-align:-3px;margin-right:6px"><path d="M3 20h4v-8H3zM10 20h4V4h-4zM17 20h4v-12h-4z"/></svg>Posiciones
       </summary>
       <div style="overflow-x:auto;margin-bottom:10px">
       <table class="tbl"><thead><tr><th>#</th><th>Pareja</th><th>PJ</th><th>G</th><th>GF</th><th>GC</th><th>Pts</th></tr></thead><tbody>
@@ -1336,7 +1369,7 @@ function buildMC(t,p,activo){
   const pa=t.parejas[p.p1], pb=t.parejas[p.p2];
   const isElim=p.fase!=='Clasificación';
   return `<div class="mc ${p.jugado?'done':''} ${isElim?'elim':''}">
-    <div class="mc-head"><span>${p.fase}</span><span>${p.jugado?'✅':'⏳'}</span></div>
+    <div class="mc-head"><span>${p.fase}</span><span>${p.jugado?`<svg class="ico" viewBox="0 0 24 24" style="width:12px;height:12px;color:var(--lime)"><path d="M5 12l4.5 4.5L19 6"/></svg>`:`<svg class="ico" viewBox="0 0 24 24" style="width:12px;height:12px;color:var(--text-mute)"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>`}</span></div>
     <div class="mc-teams">
       <div class="mc-team ${p.jugado&&p.g1>p.g2?'win':''}">${pa.nombre}</div>
       <div style="color:var(--gray);font-size:10px;font-weight:700;padding:0 3px">VS</div>
@@ -1379,7 +1412,7 @@ window.cargarRes=(tid,pid)=>{
   // Propagar ganador a siguiente ronda TBD
   propagateWinner(ps, p, g1>g2?p.p1:p.p2);
   dbUpdateTorneo(tid,{partidos:ps,parejas:par});
-  toast(`✅ ${par[p.p1].nombre} ${g1}–${g2} ${par[p.p2].nombre}`);
+  toast(ic('check')+` ${par[p.p1].nombre} ${g1}–${g2} ${par[p.p2].nombre}`);
 };
 
 // ════════════════════════════════════════════════════════════
@@ -1484,7 +1517,7 @@ window.avanzarFase=(tid)=>{
 
   const nf=nPlayIn>0?'octavos':'cuartos';
   dbUpdateTorneo(tid,{partidos:ps,fase:nf});
-  toast('🏆 Llaves generadas!');
+  toast(ic('trophy')+' Llaves generadas!');
   if(tvTid===tid){ tvFase='bracket'; renderTV(); }
 };
 
@@ -1534,13 +1567,13 @@ window.finalizarTorneo=(tid)=>{
       dbUpd[`torneos/${tid}/estado`]='finalizado';
       dbUpd[`torneos/${tid}/puntosOtorgados`]=true;
       dbUpdateGlobal(dbUpd);
-      toast('🏆 Torneo finalizado y puntos otorgados');
+      toast(ic('trophy')+' Torneo finalizado y puntos otorgados');
     },'Finalizar y otorgar puntos');
 };
 
 window.eliminarTorneo=(tid)=>{
   openModal('Eliminar torneo','<p style="color:var(--gray)">¿Eliminar? Los puntos ya otorgados no se revierten.</p>',
-    ()=>{ dbRemoveTorneo(tid); toast('🗑️ Torneo eliminado'); });
+    ()=>{ dbRemoveTorneo(tid); toast(ic('trash')+' Torneo eliminado'); });
 };
 
 // ════════════════════════════════════════════════════════════
@@ -1574,23 +1607,23 @@ function showRankContent(key){
   const c=document.getElementById('rank-content'); if(!c) return;
   const lista=jArr().filter(j=>j.genero===gen&&j.catNum===num).sort((a,b)=>(b.puntos||0)-(a.puntos||0));
   if(!lista.length){
-    c.innerHTML=`<div class="empty"><div class="ei">🏅</div>Sin jugadores en ${gen==='C'?'Caballeros':'Damas'} Cat ${num}</div>`;
+    c.innerHTML=`<div class="empty"><div class="ei"><svg viewBox="0 0 24 24" style="width:42px;height:42px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="15" r="6"/><path d="M8 4l2 6M16 4l-2 6M9 4h6"/></svg></div>Sin jugadores en ${gen==='C'?'Caballeros':'Damas'} Cat ${num}</div>`;
     return;
   }
-  const medals=['🥇','🥈','🥉'];
+  // medalSvg(pos) retorna SVG coloreado por posición
   const pc=['p1','p2','p3'];
   const rc={0:'var(--gold)',1:'var(--silver)',2:'var(--bronze)'};
   const varColors={'+':'#7affd4','':'var(--lime)','-':'#ffa07a'};
   c.innerHTML=`
     <div class="podium">${lista.slice(0,3).map((j,i)=>`
       <div class="p-card ${pc[i]||''}">
-        <div class="p-pos">${medals[i]||''}</div>
+        <div class="p-pos">${medalSvg(i)}</div>
         <div class="p-name">${j.nombre}</div>
         <div class="p-pts">${catL(j.catNum,j.catVar)} · ${j.puntos||0} pts</div>
       </div>`).join('')}
     </div>
     <div class="card">
-      <div class="ctitle">📊 ${gen==='C'?'Caballeros':'Damas'} – Cat ${num}</div>
+      <div class="ctitle"><svg class="ico" viewBox="0 0 24 24"><path d="M3 20h4v-8H3zM10 20h4V4h-4zM17 20h4v-12h-4z"/></svg>${gen==='C'?'Caballeros':'Damas'} – Cat ${num}</div>
       <table class="tbl"><thead><tr><th>#</th><th>Jugador</th><th>Cat</th><th>Torneos</th><th>Puntos</th></tr></thead>
       <tbody>${lista.map((j,i)=>`<tr>
         <td style="font-weight:700;color:${rc[i]||'var(--gray)'}">${i+1}</td>
@@ -1618,13 +1651,13 @@ window.renderDashboard=()=>{
   const top=[...ja].sort((a,b)=>(b.puntos||0)-(a.puntos||0)).slice(0,10);
   document.getElementById('dash-rank').innerHTML=top.length
     ?top.map((j,i)=>`<tr>
-        <td>${['🥇','🥈','🥉'][i]||i+1}</td>
+        <td>${i<3?medalSvg(i):i+1}</td>
         <td><strong>${j.nombre}</strong></td>
         <td><span class="badge bl">${catL(j.catNum,j.catVar)}</span></td>
         <td><span class="badge ${j.genero==='C'?'bb':'bd'}">${j.genero}</span></td>
         <td style="color:var(--lime);font-weight:700">${j.puntos||0}</td>
       </tr>`).join('')
-    :`<tr><td colspan="5"><div class="empty"><div class="ei">🏅</div>Sin datos</div></td></tr>`;
+    :`<tr><td colspan="5"><div class="empty"><div class="ei"><svg viewBox="0 0 24 24" style="width:42px;height:42px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="15" r="6"/><path d="M8 4l2 6M16 4l-2 6M9 4h6"/></svg></div>Sin datos</div></td></tr>`;
   document.getElementById('dash-activos').innerHTML=act.length
     ?act.map(t=>{const pjt=t.partidos.filter(p=>p.jugado).length,ptt=t.partidos.length;
       return `<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--border)">
@@ -1684,11 +1717,11 @@ function renderTVFaseBar(t) {
   const fD = t.fase==='final'         && t.partidos.filter(p=>p.fase==='Final').every(p=>p.jugado);
   const nextLbl = cD?(t.parejas.length>8?'Generar Octavos':'Generar Cuartos'):oD?'Generar Cuartos':qD?'Generar Semis':sD?'Generar Final':'';
   document.getElementById('tv-fase-bar').innerHTML = `
-    <button class="tv-fase-btn ${tvFase==='clasificacion'?'active':''}" onclick="tvSwitch('clasificacion')">📊 Clasificación</button>
-    ${hasBracket?`<button class="tv-fase-btn gold ${tvFase==='bracket'?'active':''}" onclick="tvSwitch('bracket')">🏆 Eliminatorias</button>`:''}
+    <button class="tv-fase-btn ${tvFase==='clasificacion'?'active':''}" onclick="tvSwitch('clasificacion')"><svg class="ico" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:4px"><path d="M3 20h4v-8H3zM10 20h4V4h-4zM17 20h4v-12h-4z"/></svg>Clasificación</button>
+    ${hasBracket?`<button class="tv-fase-btn gold ${tvFase==='bracket'?'active':''}" onclick="tvSwitch('bracket')"><svg class="ico" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:4px"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M9 20h6M12 13v7"/></svg>Eliminatorias</button>`:''}
     <div style="flex:1"></div>
-    ${activo&&fD?`<button class="tv-finalizar-btn" onclick="finalizarTorneo('${t.id}')">🏆 Finalizar Torneo</button>`:''}
-    ${activo&&cD&&!hasBracket?`<button class="tv-finalizar-btn" style="background:var(--lime);color:var(--navy)" onclick="avanzarFase('${t.id}')">🏆 Generar Llaves</button>`:''}`;
+    ${activo&&fD?`<button class="tv-finalizar-btn" onclick="finalizarTorneo('${t.id}')" style="display:inline-flex;align-items:center;gap:6px"><svg class="ico" viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M9 20h6M12 13v7"/></svg>Finalizar Torneo</button>`:''}
+    ${activo&&cD&&!hasBracket?`<button class="tv-finalizar-btn" style="background:var(--lime);color:var(--navy);display:inline-flex;align-items:center;gap:6px" onclick="avanzarFase('${t.id}')"><svg class="ico" viewBox="0 0 24 24"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M9 20h6M12 13v7"/></svg>Generar Llaves</button>`:''}`;
 }
 
 window.tvSwitch = (fase) => {
@@ -1737,7 +1770,7 @@ window.cargarResTV = (btn) => {
   propagateWinner(ps, p, g1>g2?p.p1:p.p2);
   dbUpdateTorneo(tid,{partidos:ps,parejas:par});
   const n1=p.p1!=null?par[p.p1].nombre:'?', n2=p.p2!=null?par[p.p2].nombre:'?';
-  toast(`✅ ${n1} ${g1}–${g2} ${n2}`);
+  toast(ic('check')+` ${n1} ${g1}–${g2} ${n2}`);
 };
 
 // ── Genera el bloque de carga inline con IDs únicos ──
@@ -1803,7 +1836,7 @@ function renderTVClasif(t) {
         <div class="ps"><div class="ps-v" style="color:${dif>0?'var(--lime)':dif<0?'var(--danger)':'var(--gray)'}">${dif>0?'+':''}${dif}</div><div class="ps-l">DIF</div></div>
       </div>
       <div class="pos-pts">${p.pts}</div>
-      ${clasifica?`<span class="clasif-tag">✓</span>`:''}
+      ${clasifica?`<span class="clasif-tag"><svg viewBox="0 0 24 24" style="width:9px;height:9px;stroke:currentColor;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;vertical-align:0"><path d="M5 12l4.5 4.5L19 6"/></svg></span>`:''}
     </div>${i===nClasif-1?'<div class="clasif-divider"></div>':''}`;
   }).join('');
 
@@ -1858,7 +1891,7 @@ function renderTVClasif(t) {
     return `
       <div style="border-bottom:1px solid rgba(26,48,80,.5);padding:6px 14px 2px;background:rgba(0,0,0,.15)">
         <span style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:${turnoColor}">
-          ${allDone?'✅':'🎾'} Turno ${ri+1}
+          ${allDone?`<svg viewBox="0 0 24 24" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vertical-align:-1px;margin-right:2px"><path d="M5 12l4.5 4.5L19 6"/></svg>`:`<svg viewBox="0 0 24 24" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;vertical-align:-1px;margin-right:2px"><circle cx="12" cy="12" r="9"/><path d="M6 6 L18 18 M6 18 L18 6"/></svg>`} Turno ${ri+1}
         </span>
       </div>
       ${rows}`;
@@ -1867,11 +1900,11 @@ function renderTVClasif(t) {
   document.getElementById('tv-body').innerHTML = `
     <div class="tv-clasif">
       <div class="tv-panel">
-        <div class="tv-panel-hdr">📊 Posiciones <span style="font-size:10px;color:var(--gray);font-weight:600">${pj}/${pt} partidos</span></div>
+        <div class="tv-panel-hdr"><span style="display:inline-flex;align-items:center;gap:8px"><svg class="ico" viewBox="0 0 24 24"><path d="M3 20h4v-8H3zM10 20h4V4h-4zM17 20h4v-12h-4z"/></svg>Posiciones</span><span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-mute);font-weight:500;letter-spacing:.5px">${pj}/${pt} partidos</span></div>
         <div class="tv-panel-body">${posHtml}</div>
       </div>
       <div class="tv-panel">
-        <div class="tv-panel-hdr">🎾 Partidos Clasificación</div>
+        <div class="tv-panel-hdr"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M6 6 L18 18 M6 18 L18 6"/></svg>Partidos Clasificación</div>
         <div class="tv-panel-body">${partsHtml}</div>
       </div>
     </div>`;
@@ -1885,7 +1918,7 @@ function renderTVBracket(t) {
   const hasBracket = t.partidos.some(p=>p.fase!=='Clasificación');
 
   if (!hasBracket) {
-    document.getElementById('tv-body').innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:60%;flex-direction:column;gap:12px;color:var(--gray)"><div style="font-size:48px;opacity:.2">⏳</div><div style="font-size:16px">Generá el cuadro con el botón ⚡</div></div>`;
+    document.getElementById('tv-body').innerHTML = `<div style="display:flex;align-items:center;justify-content:center;height:60%;flex-direction:column;gap:12px;color:var(--gray)"><svg viewBox="0 0 24 24" style="width:54px;height:54px;stroke:currentColor;fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round;opacity:.25"><path d="M6 3h12M6 21h12M6 3v3a6 6 0 0012 0V3M6 21v-3a6 6 0 0112 0v3"/></svg><div style="font-size:14px">Generá el cuadro con el botón <b style="color:var(--lime)">Generar Llaves</b></div></div>`;
     return;
   }
 
@@ -2014,7 +2047,7 @@ function renderTVBracket(t) {
   let center = `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:${centerW}px;flex-shrink:0;padding:0 10px">`;
   if (campeon) {
     center += `<div style="background:linear-gradient(135deg,rgba(245,197,66,.15),rgba(245,197,66,.03));border:1.5px solid rgba(245,197,66,.4);border-radius:14px;padding:16px;text-align:center;animation:tvglow 2s ease infinite alternate;width:100%">
-      <div style="font-size:34px;margin-bottom:4px">🏆</div>
+      <svg viewBox="0 0 24 24" style="width:38px;height:38px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:6px;filter:drop-shadow(0 0 8px rgba(245,197,66,.4))"><path d="M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3M9 20h6M12 13v7"/></svg>
       <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:3px">Campeón</div>
       <div style="font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:var(--white);line-height:1.1">${campeon.nombre}</div>
     </div>`;
