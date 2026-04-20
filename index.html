@@ -861,7 +861,7 @@ function toast(msg,type='ok'){
 function catL(num,vari){ return 'C'+num+(vari||''); }
 // Firebase guarda arrays como objetos {0:{...},1:{...}} — esto los normaliza siempre
 function toArr(x){ if(!x) return []; if(Array.isArray(x)) return x; return Object.values(x); }
-function jArr(){ return toArr(Object.values(jugadores)).map((j,_,__)=>j); }
+function jArr(){ return Object.entries(jugadores||{}).map(([id,j])=>({...j,id})); }
 function tArr(){ return Object.entries(torneos).map(([id,t])=>({...t,id,parejas:toArr(t.parejas),partidos:toArr(t.partidos)})).sort((a,b)=>b.creadoEn-a.creadoEn); }
 
 let modalCb=null;
